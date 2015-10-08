@@ -1,85 +1,105 @@
 <!doctype html>
-<html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-  <title>ethyr: coming soon</title>
+  <title>ethyr</title>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <meta property="og:title"              content="Ethyr: Social media that doesn't suck" />
-  <meta property="og:description"        content="We're building a new social network on an open, decentralized, private social protocol. Come be a part!" />
-  <meta property="og:image"              content="https://www.ethyr.net/images/backdrop-5.jpg" />
-  <meta property="og:url"                content="https://www.ethyr.net/" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/standardize.css">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-        // First split up the query string
-        var vars = [], hash;
-        var q = document.URL.split('?')[1];
-        var signup = '';
-        // Process any passed query string
-        // This is a bit gross but I'm trying to maintain consistent, safe state
-        if (q != undefined) {
-          q = q.split('&');
-          for(var i = 0; i < q.length; i++){
-            pair = q[i].split('=');
-            vars.push(pair[1]);
-            vars[pair[0]] = pair[1];
-          }
-          // Now extract signup
-          if ('signup' in vars){
-            if (vars['signup'] == 'pending'){
-              signup = 'pending';
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="canonical" href="https://www.ethyr.net">
+  <meta name="author" content="Nick Badger">
+  
+  <!-- Start OG -->
+    <meta property="og:title"              content="Ethyr: Social media that doesn't suck" />
+    <meta property="og:description"        content="We're building a new social network on an open, decentralized, private social protocol. Come be a part!" />
+    <meta property="og:image"              content="https://www.ethyr.net/images/backdrop-S.jpg" />
+    <meta property="og:url"                content="https://www.ethyr.net/" />
+  <!-- End OG -->
+  
+  <!-- Begin style links -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/standardize.css">
+    <link rel="stylesheet" href="/css/index.css">
+  <!-- End style links -->
+  
+  <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/js/makefixed.js"></script>
+    <script>
+      $(document).ready(function(){
+          // First split up the query string
+          var vars = [], hash;
+          var q = document.URL.split('?')[1];
+          var signup = '';
+          // Process any passed query string
+          // This is a bit gross but I'm trying to maintain consistent, safe state
+          if (q != undefined) {
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+              pair = q[i].split('=');
+              vars.push(pair[1]);
+              vars[pair[0]] = pair[1];
             }
-            else if (vars['signup'] == 'confirmed'){
-              signup = 'confirmed';
+            // Now extract signup
+            if ('signup' in vars){
+              if (vars['signup'] == 'pending'){
+                signup = 'pending';
+              }
+              else if (vars['signup'] == 'confirmed'){
+                signup = 'confirmed';
+              }
             }
           }
-        }
-        
-        if (signup == 'pending'){
-          $('#mc-pending').show();
-        }
-        else if (signup == 'confirmed'){
-          $('#mc-confirmed').show();
-        }
-        else {
-          $('#mc-form').show();
-        }
-        
-        // Finally, make the page appear (waiting eliminates flicker).
-        $("#page-container").delay(300).animate({opacity:1}, 200);
-      });
-  </script>
-  <!-- Dirty fucking google analytics, but at least I don't have ad tracking on. -->
-  <script type="text/javascript">
+          
+          if (signup == 'pending'){
+            $('#mc-pending').show();
+          }
+          else if (signup == 'confirmed'){
+            $('#mc-confirmed').show();
+          }
+          else {
+            $('#mc-form').show();
+          }
+          
+          // Fix the navbar
+          $('#navbar').makeFixed();
+          
+          // Figure out the scroll distance and scroll to it
+          var pageContainerPosition = $("#page-container").offset().top;
+          var scrollTop = Math.ceil(pageContainerPosition * .935);
+          window.scrollTo(0, scrollTop);
+          
+          // Finally, make the page appear (waiting eliminates flicker).
+          $("#page-container").delay(300).animate({opacity:1}, 200);
+        });
+    </script>
+    <!-- Dirty fucking google analytics, but at least I don't have ad tracking on. -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-67619311-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-  <!-- Hey man, gotta work with the system if you're to have a hope to change the system -->
+      ga('create', 'UA-67619311-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Hey man, gotta work with the system if you're to have a hope to change the system -->
+  <!-- No more scripts -->
 </head>
-<body class="body page-index clearfix" onLoad="window.scroll(0,750)">
+<body class="body page-index clearfix">
   <div id="coverfix"><div id="coverfix-bg"></div></div>
   <div id="page-container" class="container-page clearfix" style="opacity: 0;">
   
   
     <!-- Begin top gradient row -->
-    <div class="container-full padded-light fill-transgradient color-inverted clearfix" >
+    <div class="container-full padded-light fill-transgradient color-inverted clearfix" id="titular">
     
       <!-- Begin title -->
-      <div class="container-full clearfix">
-          <h1 style="margin-left: 35%;">ethyr</h1>
-          <h2 style="margin-left: 45%;"><span class="breakfix">social media</span> <span class="breakfix">that doesn't suck</span></h2>
+      <div class="container-full clearfix" id="page-title">
+          <h1>ethyr</h1>
+          <h2><span class="breakfix">social media</span> <span class="breakfix">that doesn't suck</span></h2>
       </div>
       <!-- End title -->
       
@@ -119,16 +139,30 @@
       <div class="container-full clearfix">
         <p class="container-50 centered"><span class="breakfix">Please contact <a href="mailto:badg@muterra.io">Nick Badger</a></span> <span class="breakfix">with any comments or questions.</span></p>
       </div>
-      <!-- End title -->
+      <!-- End questions/comments -->
     </div>
     <!-- End top gradient row -->
+    
+  
+    <!-- Begin navbär -->
+    <div id="navbar" class="container-full clearfix">
+      <div class="justifyfix">
+        <div class="navbar-container" id="navbar-home"><a href="/"><h1>ethyr</h1></a></div>
+        <div class="navbar-container" id="navbar-blog"><a href="/blog/">blog</a></div>
+      </div>
+    </div>
+    <!-- End navbär -->
     
     
     <!-- Begin light-colored explanation row -->
     <div class="container-full fill-light padded-light-topsy transformfix">
+      <!-- Placeholder div for preserving flow with absolute navbar -->
+      <div id="navbar-offset"></div>
+      <!-- End placeholder div -->
+      
     <!-- Begin columns -->
       <!-- Begin left column item-->
-      <div class="container-50 left padded-light-sides">
+      <div class="container-50 left stacking padded-light-sides">
         <div class="block right color-inverted fill-dark clearfix">
           <img src="../images/private.svg">
           <div class="puffer">
@@ -140,7 +174,7 @@
       <!-- End left column item -->
       
       <!-- Begin right column item -->
-      <div class="container-50 right padded-light-sides">
+      <div class="container-50 right stacking padded-light-sides">
         <div class="block left color-inverted fill-dark clearfix">
           <img src="../images/secure.svg">
           <div class="puffer">
@@ -152,7 +186,7 @@
       <!-- End right column item -->
       
       <!-- Begin left column item -->
-      <div class = "container-50 left padded-light-sides">
+      <div class = "container-50 left stacking padded-light-sides">
         <div class="block right color-inverted fill-dark clearfix">
           <img src="../images/easy.svg">
           <div class="puffer">
@@ -164,19 +198,19 @@
       <!-- End left column item -->
       
       <!-- Begin right column item -->
-      <div class="container-50 right padded-light-sides">
+      <div class="container-50 right stacking padded-light-sides">
         <div class="block left color-inverted fill-dark clearfix">
           <img src="../images/code.svg">
           <div class="puffer">
             <h1>Open</h1>
-            <p>We're writing open-source code on an open platform called <a href="https://github.com/Muterra/doc-muse">the Muse</a>.</p>
+            <p>We're writing open-source code with an open protocol called <a href="https://github.com/Muterra/doc-muse">Muse</a>.</p>
           </div>
         </div>
       </div>
       <!-- End right column item-->
       
       <!-- Begin left column item -->
-      <div class="container-50 left padded-light-sides">
+      <div class="container-50 left stacking padded-light-sides">
         <div class="block right color-inverted fill-dark clearfix">
           <img src="../images/legs.svg">
           <div class="puffer">
@@ -188,7 +222,7 @@
       <!-- End left column item -->
       
       <!-- Begin right column item -->
-      <div class="container-50 right padded-light-sides">
+      <div class="container-50 right stacking padded-light-sides">
         <div class="block left color-inverted fill-dark clearfix">
           <img src="../images/light.svg">
           <div class="puffer">
@@ -204,7 +238,7 @@
     
     
     <!-- Begin copyright footer -->
-    <div class="container-full padded-light fill-dark clearfix">
+    <div class="container-full padded-light fill-dark clearfix" id="footer">
       <div class="centered clearfix">
         <p class="copyright">© <a href="https://www.muterra.io">Muterra, Inc</a>. All rights reserved.</p>
       </div>
