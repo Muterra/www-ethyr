@@ -54,14 +54,16 @@
           }
           
           if (signup == 'pending'){
+            $('#mc-form').hide();
             $('#mc-pending').show();
           }
           else if (signup == 'confirmed'){
+            $('#mc-form').hide();
             $('#mc-confirmed').show();
           }
-          else {
+          /*else {
             $('#mc-form').show();
-          }
+          }*/
           
           // Fix the navbar
           $('#navbar').makeFixed();
@@ -112,7 +114,7 @@
         <h2 id="mc-confirmed" class="container-50 centered start-silent clearfix">Your subscription is confirmed. Thanks!</h2>
         <!-- End confirmed text -->
         <!-- Begin actual form -->
-        <form id="mc-form" action="//muterra.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=7c46a4402e" method="post" class="container-full start-silent clearfix">
+        <form id="mc-form" action="//muterra.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=7c46a4402e" method="post" class="container-full clearfix">
           <div id="mc-forminfo" class="centered">
             <p id="mc-forminfo">Keep me posted, please!</p>
             <div id="mce-success-response"></div>
