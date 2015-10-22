@@ -198,6 +198,22 @@ li.followbox-item {
   color: rgb(42, 91, 138);
 }
 
+.nextupbox {
+  margin-left: 10%;
+  width: 80%;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.nextupbox p {
+  display: inline;
+}
+
 #sidebar {
   /* Anything for the sidebar container div */
   width: 24%;
