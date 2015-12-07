@@ -86,11 +86,13 @@ body {
   width: 49%;
   padding: 50px;
   vertical-align: middle;
+  height: 100%;
 }
 
 #mailchimpery {
   position: relative;
   top: -10%;
+  height: auto;
 }
 
 #mailchimpery h1 {
@@ -147,17 +149,34 @@ body {
   border: 2px solid black;
 }
 
-#app-mock-container {
+#app-mock-container,
+#cipher-mock-container,
+#privacy-vs-promise-container {
+  /*height: 100%;*/
+}
+
+#app-mock,
+#cipher-mock,
+#privacy-vs-promise {
+  width: 100%;
   height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #app-mock {
-  width: 100%;
-  height: 100%;
   background-image: url('/assets/app_in_monitor.svg');
   background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+}
+
+#cipher-mock {
+  background-image: url('/assets/private-secure.svg');
+  background-size: 497px;
+}
+
+#privacy-vs-promise {
+  background-image: url('/assets/privacy-vs-promise.svg');
+  background-size: contain;
 }
 
 #splash-logo {
@@ -237,6 +256,7 @@ body {
     padding: 10px;
     display: block;
     width: 100%;
+    height: 50%;
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -244,8 +264,21 @@ body {
     transform: translateX(-50%);
   }
   
-  #app-mock {
+  #app-mock,
+  #cipher-mock {
     background-position: center top;
+  }
+  
+  #privacy-vs-promise {
+    background-position: center center;
+  }
+  
+  #app-mock {
+    background-size: 100%;
+  }
+  
+  #app-mock-container {
+    height: 750px;
   }
 }
 
