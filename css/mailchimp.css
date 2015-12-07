@@ -282,6 +282,627 @@ button {
   background-image: url('/images/social-gplus.svg');
 }
 
+.transformfix {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#coverfix {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+#coverfix-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#titular {
+  /* Here there be dragons... and anything for the top title div. */
+}
+
+#navbar {
+  color: rgb(26, 26, 26);
+  background-color: white;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding-top: 7px;
+  width: 100%;
+  /*text-shadow: 0px 0px 2px rgb(139, 42, 44);*/
+  height: 45px;
+  /* Primary color */
+  /* color: rgb(42, 91, 138); */
+  /* Secondary color */
+  /* color: rgb(139, 42, 44); */
+  /* Inverted color */
+  /* color: rgb(230, 230, 230); */
+  /* Dark color */
+  /* color: rgb(26, 26, 26); */
+}
+
+.justifyfix {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  font-size: 0;
+  font-size: 12px\9; /* IE6-9 only hack */
+}
+
+.justifyfix:after{
+  content: "";
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+}
+
+.justifyfix div,
+.justifyfix li {
+  font-size: medium;
+}
+
+#navbar .justifyfix {
+  width: 700px;
+  color: rgb(128, 128, 128);
+}
+
+#navbar a {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.2em;
+  color: rgb(100, 100, 120);
+  font-weight: normal;
+}
+
+#navbar h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+#navbar-home {
+  /* Specific to the navbar home link */
+}
+
+#navbar-blog {
+  /* Specific to the navbar blog link */
+  text-align: right;
+}
+
+.navbar-container {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+#footer a {
+  color: rgb(139, 42, 44);
+}
+
+#footer {
+  color: rgb(128, 128, 128);
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  display: inline-block;
+  font-weight: 700;
+  color: rgb(42, 91, 138);
+  /*text-shadow: 0px 0px 2px rgb(26, 26, 26);*/
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  -ms-transition: all .2s;
+  transition: all .2s;
+}
+
+a:hover {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+span.breakfix {
+  display: inline-block;
+}
+
+span.bold {
+  font-weight: 700;
+}
+
+p.bold {
+  font-weight: 700;
+}
+
+.color-primary {
+  color: rgb(42, 91, 138);
+}
+
+.color-secondary {
+  color: rgb(139, 42, 44);
+}
+
+.color-inverted {
+  color: rgb(230, 230, 230);
+}
+
+.color-dark {
+  color: rgb(26, 26, 26);
+}
+
+.fill-transgradient {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(26,26,26,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ff1a1a1a',GradientType=0 ); /* IE6-9 */
+} 
+
+.fill-transgradient h1 {
+  text-shadow: 0px 0px 8px black;
+}
+
+.fill-transgradient.color-primary h2 {
+  text-shadow: 0px 0px 6px black;
+}
+
+.fill-primary {
+  background-color: rgb(42, 91, 138);
+}
+
+.fill-secondary {
+  background-color: rgb(139, 42, 44);
+}
+
+.fill-light {
+  background-color: white;
+}
+
+.fill-subdued {
+  background-color: rgb(230, 230, 230);
+}
+
+.fill-dark {
+  background-color: rgb(26, 26, 26);
+}
+
+.start-hidden {
+  visibility: hidden;
+}
+
+.start-silent {
+  display: none;
+}
+
+.show-overflow {
+  overflow: visible !important;
+}
+
+.container-page {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, .5);
+  overflow: hidden;
+}
+
+.container-full {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  position: relative;
+}
+
+.container-75 {
+  position: relative;
+  width: 74%;
+  overflow: hidden;
+}
+
+.container-50 {
+  position: relative;
+  width: 49%;
+  overflow: hidden;
+}
+
+.container-25 {
+  position: relative;
+  width: 24%;
+  overflow: hidden;
+}
+
+.container-75.left, 
+.container-75.right,
+.container-50.left, 
+.container-50.right,
+.container-25.left, 
+.container-25.right {
+  text-align: inherit;
+}
+
+.container-75.left h1, 
+.container-75.left h2,
+.container-50.left h1, 
+.container-50.left h2,
+.container-25.left h1, 
+.container-25.left h2,
+.block.left h1, 
+.block.left h2 {
+  text-align: right;
+}
+
+.container-75.right h1, 
+.container-75.right h2,
+.container-50.right h1, 
+.container-50.right h2,
+.container-25.right h1, 
+.container-25.right h2,
+.block-right h1,
+.block-right h2 {
+  text-align: left;
+}
+
+.stacking {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.block {
+  display: block;
+  width: 75%;
+  min-width: 315px;
+  max-width: 400px;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.block.right {
+  text-align: right;
+  position: relative;
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.block.left {
+  text-align: left;
+  position: relative;
+  left: 0;
+}
+
+.block img {
+  position: relative;
+  width: auto;
+  height: 75%;
+  top: 12.5%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  
+.block p {
+  font-size: 1.2em;
+}
+
+.block.right img {
+  float: left;
+}
+
+.block.left img {
+  float: right;
+}
+
+.block h1 {
+  font-size: 1.25em;
+  font-weight: 700;
+  position: absolute;
+  top: -2em;
+}
+
+.block h2 {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.block.left h1,
+.block.left h2 {
+  left: 0;
+}
+
+.block.right h1,
+.block.right h2 {
+  right: 0;
+}
+
+.block div.puffer {
+  position: relative;
+  top: 50%;  
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.centered {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.padded-light {
+  padding: 50px;
+}
+
+.padded-light-topsy {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.padded-light-sides {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.padded-mid-topsy {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.squeezed {
+  padding: 200px;
+}
+
+.squeezed-sides {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.squeezed-topsy {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.padded-light.left,
+.padded-light-sides.left,
+.squeezed.left,
+.squeezed-sides.left {
+  padding-right: 25px;
+}
+
+.padded-light.right,
+.padded-light-sides.right,
+.squeezed.right,
+.squeezed-sides.right {
+  padding-left: 25px;
+}
+
+.spaced {
+  margin: 10px;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.tail-offset {
+  visibility: hidden;
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+
+  #navbar .justifyfix {
+    width: 500px;
+    }
+}
+
+@media(max-width: 725px) {
+  
+  .stacking {
+    position: relative;
+    clear: both;
+    width: 100%;
+  }
+
+  .stacking {
+    position: relative;
+    clear: both;
+    width: 100%;
+  }
+  
+  .block {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .padded-light.left,
+  .padded-light-sides.left {
+    padding-right: 50px;
+  }
+
+  .squeezed.left,
+  .squeezed-sides.left {
+    padding-right: 200px;
+  }
+
+  .padded-light.right,
+  .padded-light-sides.right {
+    padding-left: 50px;
+  }
+  .squeezed.right,
+  .squeezed-sides.right {
+    padding-left: 200px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  .tail-offset {
+    position: relative;
+  }
+}
+
+@media(max-width: 515px) {
+  
+  .block.left {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  .block.right {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  #navbar .justifyfix {
+    width: 300px;
+  }
+}
+
+@media(max-width: 435px) {
+  
+  .padded-light-sides {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .padded-light.left,
+  .padded-light-sides.left {
+    padding-right:10px;
+  }
+
+  .squeezed.left,
+  .squeezed-sides.left {
+    padding-right: 10px;
+  }
+
+  .padded-light.right,
+  .padded-light-sides.right {
+    padding-left: 10px;
+  }
+  .squeezed.right,
+  .squeezed-sides.right {
+    padding-left: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .block h1 {
+    position: static;
+  }
+  
+  .block.left h1 {
+    text-align: center;
+  }
+  
+  .block.right h1 {
+    text-align: center;
+  }
+  
+  .block {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    height: initial;
+    padding: 15px;
+  }
+  
+  .block.left {
+    text-align: center;
+  }
+  
+  .block.right {
+    text-align: center;
+  }
+  
+  .block img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 150px;
+    width: 80%;
+    height: auto;
+  }
+  
+  .block.left img {
+    position: static;
+    float: none;
+    clear: both;
+  }
+  
+  .block.right img {
+    position: static;
+    float: none;
+    clear: both;
+  }
+  
+  .block div.puffer {
+    position: static;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  
+  .padded-mid-topsy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .padded-mid-sides {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .padded-mid {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .copyright {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  #navbar .justifyfix {
+    width: 200px;
+  }
+}
+
 @media (max-width: 1275px) {
     
   #content-column {

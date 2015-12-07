@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-  <title>ethyr</title>
+  <title>ethyr: better than email</title>
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
@@ -11,14 +11,14 @@
   <meta name="author" content="Nick Badger">
   
   <!-- Start OG -->
-    <meta property="og:title"              content="Ethyr: Social media that doesn't suck" />
-    <meta property="og:description"        content="We're building a new social network on an open, decentralized, private social protocol. Come be a part!" />
-    <meta property="og:image"              content="https://www.ethyr.net/images/backdrop-S.jpg" />
+    <meta property="og:title"              content="Ethyr: Better than email" />
+    <meta property="og:description"        content="We're building a secure, modern internet mail solution for privacy-conscious individuals." />
+    <meta property="og:image"              content="https://www.ethyr.net/images/logo-full-plain.png" />
     <meta property="og:url"                content="https://www.ethyr.net/" />
   <!-- End OG -->
   
   <!-- Begin style links -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="/css/standardize.css">
     <link rel="stylesheet" href="/css/index.css">
@@ -26,56 +26,16 @@
   
   <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="/js/makefixed.js"></script>
     <script>
-      $(document).ready(function(){
-          // First split up the query string
-          var vars = [], hash;
-          var q = document.URL.split('?')[1];
-          var signup = '';
-          // Process any passed query string
-          // This is a bit gross but I'm trying to maintain consistent, safe state
-          if (q != undefined) {
-            q = q.split('&');
-            for(var i = 0; i < q.length; i++){
-              pair = q[i].split('=');
-              vars.push(pair[1]);
-              vars[pair[0]] = pair[1];
-            }
-            // Now extract signup
-            if ('signup' in vars){
-              if (vars['signup'] == 'pending'){
-                signup = 'pending';
-              }
-              else if (vars['signup'] == 'confirmed'){
-                signup = 'confirmed';
-              }
-            }
-          }
-          
-          if (signup == 'pending'){
-            $('#mc-form').hide();
-            $('#mc-pending').show();
-          }
-          else if (signup == 'confirmed'){
-            $('#mc-form').hide();
-            $('#mc-confirmed').show();
-          }
-          /*else {
-            $('#mc-form').show();
-          }*/
-          
-          // Fix the navbar
-          $('#navbar').makeFixed();
-          
+      $( document ).ready(function() {
+        $("#learnmore").on('click', function(){
           // Figure out the scroll distance and scroll to it
-          var pageContainerPosition = $("#page-container").offset().top;
-          var scrollTop = Math.ceil(pageContainerPosition * .935);
-          window.scrollTo(0, scrollTop);
-          
-          // Finally, make the page appear (waiting eliminates flicker).
-          $("#page-container").delay(300).animate({opacity:1}, 200);
+          var pageContainerPosition = $("#frame-container-2").offset().top;
+          var scrollToLoc = Math.ceil(pageContainerPosition * .935);
+          $("html, body").animate({ scrollTop: scrollToLoc }, 600);
+          return false;
         });
+      });
     </script>
     <!-- Dirty fucking google analytics, but at least I don't have ad tracking on. -->
     <script>
@@ -90,164 +50,43 @@
     <!-- Hey man, gotta work with the system if you're to have a hope to change the system -->
   <!-- No more scripts -->
 </head>
-<body class="body page-index clearfix">
-  <div id="coverfix"><div id="coverfix-bg"></div></div>
-  <div id="page-container" class="container-page clearfix" style="opacity: 0;">
-  
-  
-    <!-- Begin top gradient row -->
-    <div class="container-full padded-light fill-transgradient color-inverted clearfix" id="titular">
-    
-      <!-- Begin title -->
-      <div class="container-full clearfix" id="page-title">
-          <h1>ethyr</h1>
-          <h2><span class="breakfix">social media</span> <span class="breakfix">that doesn't suck</span></h2>
-      </div>
-      <!-- End title -->
-      
-      <!-- Begin mailchimp form -->
-      <div class="container-full padded-light-topsy clearfix">
-        <!-- Start pending confirmation text -->
-        <h2 id="mc-pending" class="container-50 centered start-silent clearfix"><span class="breakfix">Thanks for the interest!</span> <span class="breakfix">Please check your email to confirm.</span></h2>
-        <!-- End pending confirmation text -->
-        <!-- Start confirmed text -->
-        <h2 id="mc-confirmed" class="container-50 centered start-silent clearfix">Your subscription is confirmed. Thanks!</h2>
-        <!-- End confirmed text -->
-        <!-- Begin actual form -->
-        <form id="mc-form" action="//muterra.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=7c46a4402e" method="post" class="container-full clearfix">
-          <div id="mc-forminfo" class="centered">
-            <p id="mc-forminfo">Keep me posted, please!</p>
-            <div id="mce-success-response"></div>
-            <div id="mce-error-response"></div>
-          </div>
-          <div class="color-dark container-full show-overflow centered clearfix">
-            <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="name@email.com" class="spaced centered">
-          </div>
-          <div style="position: absolute; left: -5000px;">
-            <input type="text" name="b_657c50148ecaf8c628e366ecc_7c46a4402e" tabindex="-1" value="">
-          </div>
-          <div class="centered">
+<body>
+  <div class="content-frame-container" id="frame-container-1">
+    <div id="splash-logo">
+      <div class="content-frame">
+        <!-- Begin mailing list doodads -->
+        <div class="half-block" id="mailchimpery">
+          <form id="mc-form" action="//muterra.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=37b9087234" method="post" class="clearfix">
+            <h1>Better than email</h1>
+            <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="email me when it's available" class="centered">
             <button id="mc-embedded-subscribe" type="submit">Subscribe</button>
-          </div>
-          <div class="padded-light-topsy">
-            <h2 class="centered"><span class="breakfix"><span class="breakfix">We're building a new social</span> <span class="breakfix">network that puts you back</span></span> <span class="breakfix"><span class="breakfix">in control of your data:</span> <span class="breakfix">privately, securely, and simply.</span></span></h2>
-          </div>
-        </form>
-        <!-- End actual form -->
-      </div>
-      <!-- End mailchimp form -->
-    
-      <!-- Begin questions/comments blurb -->
-      <div class="container-full clearfix">
-        <p class="container-50 centered"><span class="breakfix">Please contact <a href="mailto:badg@muterra.io">Nick Badger</a></span> <span class="breakfix">with any comments or questions.</span></p>
-      </div>
-      <!-- End questions/comments -->
-    </div>
-    <!-- End top gradient row -->
-    
-  
-    <!-- Begin navbär -->
-    <div id="navbar" class="container-full clearfix">
-      <div class="justifyfix">
-        <div class="navbar-container" id="navbar-home"><a href="/"><h1>ethyr</h1></a></div>
-        <div class="navbar-container" id="navbar-blog"><a href="/blog/">blog</a></div>
+            <button id="learnmore" type="button">Learn more</button>
+            <div class="silently-incinerate">
+              <input class="silently-incinerate" type="text" name="b_657c50148ecaf8c628e366ecc_37b9087234" tabindex="-1" value="">
+            </div>
+          </form>
+        </div>
+        <!-- End mailing list doodads -->
+        <div class="half-block" id="app-mock-container">
+          <div id="app-mock"></div>
+        </div>
       </div>
     </div>
-    <!-- End navbär -->
-    
-    
-    <!-- Begin light-colored explanation row -->
-    <div class="container-full fill-light padded-light-topsy transformfix">
-      <!-- Placeholder div for preserving flow with absolute navbar -->
-      <div id="navbar-offset"></div>
-      <!-- End placeholder div -->
-      
-    <!-- Begin columns -->
-      <!-- Begin left column item-->
-      <div class="container-50 left stacking padded-light-sides">
-        <div class="block right color-inverted fill-dark clearfix">
-          <img src="../images/private.svg">
-          <div class="puffer">
-            <h1>Private</h1>
-            <p>You control sharing. No one else can access your data - not even advertisers.</p>
-          </div>
-        </div>
-      </div>
-      <!-- End left column item -->
-      
-      <!-- Begin right column item -->
-      <div class="container-50 right stacking padded-light-sides">
-        <div class="block left color-inverted fill-dark clearfix">
-          <img src="../images/secure.svg">
-          <div class="puffer">
-            <h1>Secure</h1>
-            <p>All data on Ethyr is encrypted from person to person. <em>Everything.</em></p>
-          </div>
-        </div>
-      </div>
-      <!-- End right column item -->
-      
-      <!-- Begin left column item -->
-      <div class = "container-50 left stacking padded-light-sides">
-        <div class="block right color-inverted fill-dark clearfix">
-          <img src="../images/easy.svg">
-          <div class="puffer">
-            <h1>Simple</h1>
-            <p>No complicated setup, no confusing privacy settings.</p>
-          </div>
-        </div>
-      </div>
-      <!-- End left column item -->
-      
-      <!-- Begin right column item -->
-      <div class="container-50 right stacking padded-light-sides">
-        <div class="block left color-inverted fill-dark clearfix">
-          <img src="../images/code.svg">
-          <div class="puffer">
-            <h1>Open</h1>
-            <p>We're writing open-source code with an open protocol called <a href="https://github.com/Muterra/doc-muse">Muse</a>.</p>
-          </div>
-        </div>
-      </div>
-      <!-- End right column item-->
-      
-      <!-- Begin left column item -->
-      <div class="container-50 left stacking padded-light-sides">
-        <div class="block right color-inverted fill-dark clearfix">
-          <img src="../images/legs.svg">
-          <div class="puffer">
-            <h1>Portable</h1>
-            <p>Want to run Ethyr on your own private server? We can do that, too.</p>
-          </div>
-        </div>
-      </div>
-      <!-- End left column item -->
-      
-      <!-- Begin right column item -->
-      <div class="container-50 right stacking padded-light-sides">
-        <div class="block left color-inverted fill-dark clearfix">
-          <img src="../images/light.svg">
-          <div class="puffer">
-            <h1>Extendable</h1>
-            <p>Find something you think is missing? We'll help you add it.</p>
-          </div>
-        </div>
-      </div>
-      <!-- End right column item-->
-    <!-- End columns -->
-    </div>
-    <!-- End light-colored explanation row -->
-    
-    
-    <!-- Begin copyright footer -->
-    <div class="container-full padded-light fill-dark clearfix" id="footer">
-      <div class="centered clearfix">
-        <p class="copyright">© <a href="https://www.muterra.io">Muterra, Inc</a>. All rights reserved.</p>
-      </div>
-    </div>
-    <!-- End copyright footer -->
   </div>
-  <!-- End the page and add an offset for the pretty picture. -->
-  <div class="tail-offset"></div>
+  <div class="content-frame-container" id="frame-container-2">
+  </div>
+  <div class="content-frame-container" id="frame-container-3">
+  </div>
+  <div class="content-frame-container" id="frame-container-4">
+  </div>
+  <div class="content-frame-container" id="frame-container-5">
+  </div>
+  <!-- Begin copyright footer -->
+  <div class="content-row" id="footer-page">
+    <div class="centered">
+      <p class="copyright">© <a href="https://www.muterra.io">Muterra, Inc</a>. All rights reserved.</p>
+    </div>
+  </div>
+  <!-- End copyright footer -->
 </body>
 </html>
