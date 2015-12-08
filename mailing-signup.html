@@ -51,106 +51,35 @@
   </script>
   <!-- Hey man, gotta work with the system if you're to have a hope to change the system -->
 </head>
-<body class="body page-index clearfix">
-  <div id="coverfix"><div id="coverfix-bg"></div></div>
-  <div id="page-container" class="container-page clearfix" style="opacity: 0;">
-  
-    <!-- Begin top titular row -->
-    <div class="container-full color-inverted clearfix" id="titular">
-    </div>
-    <!-- End top titular row -->
-    
-    <!-- Begin fill-subdued row -->
-    <div class="container-full fill-subdued transformfix" id="page-row">
-      <div id="content-column">
-      
-        <!-- Begin featured content -->
-        <div id="featured">
-            <div class="article-feature">
-              <!-- Begin social image -->
-              <div class="article-cover_image">
-                <img src="/images/imgfix.png" style="background-image: url('/images/backdrop-S.jpg');">
-              </div>
-              <!-- End social image -->
-              
-              <!-- Begin mailing list doodads -->
-              <div class="mailchimpery">
-                <!-- Begin title -->
-                <div class="clearfix" id="page-title">
-                    <h1><a href="/">ethyr</a></h1>
-                    <h2>better than email</h2>
-                    
-                    <!-- Begin actual form -->
-                    <form id="mc-form" action="//muterra.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=37b9087234" method="post" class="clearfix">
-                      <div id="mc-forminfo" class="centered">
-                        <div id="mce-success-response"></div>
-                        <div id="mce-error-response"></div>
-                      </div>
-                      <p><em>Sign me up for your mailing list!</em></p>
-                      <div class="color-dark container-full show-overflow centered clearfix">
-                        <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="name@email.com" class="spaced centered">
-                      </div>
-                      <div style="position: absolute; left: -5000px;">
-                        <input type="text" name="b_657c50148ecaf8c628e366ecc_37b9087234" tabindex="-1" value="">
-                      </div>
-                      <div class="centered">
-                        <button id="mc-embedded-subscribe" type="submit">Subscribe</button>
-                      </div>
-                    </form>
-                    <!-- End actual form -->
-                    <p class="small">Not convinced? Check out the Muterra <a href="/blog">blog</a>. <br/>
-                      Or, click <a href="javascript:history.back()">here</a> to go back.</p>
-                </div>
-                <!-- End title -->
-                
-              </div>
-              <!-- End mailing list doodads -->
-              
-              <!-- Begin pdf, social links, etc -->
-              <div class="article-social_box">
-                <ul>
-                  <li>
-                    <a class="social" id="email_link" href="mailto:?&body=I%20thought%20you%20might%20be%20interested%20in%20this%20mailing%20list%3A%20https%3A//www.ethyr.net/mailing-signup.html" title="Share with email">
-                      <span>Email</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social" id="facebook_link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.ethyr.net/mailing-signup.html" title="Share on Facebook">
-                      <span>Facebook</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social" id="twitter_link" href="https://twitter.com/home?status=https%3A//www.ethyr.net/mailing-signup.html" title="Share on Twitter">
-                      <span>Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social" id="gplus_link" href="https://plus.google.com/share?url=https%3A//www.ethyr.net/mailing-signup.html" title="Share on Google+">
-                      <span>Google+</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End pdf, social links, etc -->
+<body>
+  <div class="content-frame-container" id="frame-container-1">
+    <div id="splash-logo">
+      <div class="content-frame">
+        <!-- Begin mailing list doodads -->
+        <div class="half-block" id="mailchimpery">
+          <form id="mc-form" action="//muterra.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=37b9087234" method="post" class="clearfix">
+            <h1>Better than email</h1>
+            <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="email me when it's available" class="centered">
+            <button id="mc-embedded-subscribe" type="submit">Subscribe</button>
+            <button id="learnmore" type="button" onclick="location.href='/index.html#frame-container-2';">Learn more</button>
+            <div class="silently-incinerate">
+              <input class="silently-incinerate" type="text" name="b_657c50148ecaf8c628e366ecc_37b9087234" tabindex="-1" value="">
             </div>
+          </form>
         </div>
-        <!-- End featured content -->
-        
-      </div>
-      <!-- End content column -->
-    </div>
-    <!-- End blog content row -->
-    
-    
-    <!-- Begin copyright footer -->
-    <div class="container-full padded-light fill-dark clearfix" id="footer">
-      <div class="centered clearfix">
-        <p class="copyright">© <a href="https://www.muterra.io">Muterra, Inc</a>. All rights reserved.</p>
+        <!-- End mailing list doodads -->
+        <div class="half-block" id="app-mock-container">
+          <div id="app-mock"></div>
+        </div>
       </div>
     </div>
-    <!-- End copyright footer -->
   </div>
-  <!-- End the page container and add an offset for the pretty picture. -->
-  <div class="tail-offset"></div>
+  <!-- Begin copyright footer -->
+  <div class="content-row" id="footer-page">
+    <div class="centered">
+      <p class="copyright">© <a href="https://www.muterra.io">Muterra, Inc</a>. All rights reserved.</p>
+    </div>
+  </div>
+  <!-- End copyright footer -->
 </body>
 </html>
