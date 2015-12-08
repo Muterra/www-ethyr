@@ -177,12 +177,12 @@ body {
 }
 
 #cipher-mock {
-  background-image: url('/assets/private-secure.svg');
+  background-image: url('/assets/private-secure.png');
   background-size: 497px;
 }
 
 #privacy-vs-promise {
-  background-image: url('/assets/privacy-vs-promise.svg');
+  background-image: url('/assets/privacy-vs-promise.png');
   background-size: contain;
 }
 
@@ -205,7 +205,7 @@ body {
   border-radius: 25px;
   background-position: 0px -75px;
   background-repeat: no-repeat;
-  background-image: url('/assets/longform.svg');
+  background-image: url('/assets/longform.png');
   background-size: 750px auto;
 }
 
@@ -242,25 +242,25 @@ body {
 
 #context-filter {
   background-position: -25px 0px;
-  background-image: url('/assets/context-filter.svg');
+  background-image: url('/assets/context-filter.png');
   background-size: 600px auto;
 }
 
 #volume-adjust {
   background-position: 0px -50px;
-  background-image: url('/assets/volume-adjust.svg');
+  background-image: url('/assets/volume-adjust.png');
   background-size: 700px auto;
 }
 
 #one-click {
   background-position: left center;
-  background-image: url('/assets/one-click.svg');
+  background-image: url('/assets/one-click.png');
   background-size: 750px auto;
 }
 
 #recipient-groups {
   background-position: -40px -150px;
-  background-image: url('/assets/recipient-groups.svg');
+  background-image: url('/assets/recipient-groups.png');
   background-size: 650px auto;
 }
 
