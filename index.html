@@ -35,6 +35,12 @@
           $("html, body").animate({ scrollTop: scrollToLoc }, 600);
           return false;
         });
+        $("#returntop").on('click', function(){
+          // Figure out the scroll distance and scroll to it
+          var scrollToLoc = $("#frame-container-1").offset().top;
+          $("html, body").animate({ scrollTop: scrollToLoc }, 600);
+          return false;
+        });
       });
     </script>
     <!-- Dirty fucking google analytics, but at least I don't have ad tracking on. -->
@@ -94,6 +100,28 @@
     </div>
   </div>
   <div class="content-frame-container" id="frame-container-4">
+    <div class="content-frame">
+      <div class="full-block" id="modern-label">
+        <h1>With modern additions</h1>
+      </div>
+      <div class="full-block" id="modern-container">
+        <ul id="modern">
+          <li id="context-filter-container">
+            <div class="modern-li-img" id="context-filter"></div><h2>Filter messages into contextual inboxes</h2>
+          </li>
+          <li id="volume-adjust-container">
+            <div class="modern-li-img" id="volume-adjust"></div><h2>Adjust the volume on bad (or good) senders</h2>
+          </li>
+          <li id="one-click-container">
+            <div class="modern-li-img" id="one-click"></div><h2>Archive or delete with a single click</h2>
+          </li>
+          <li id="recipient-groups-container">
+            <div class="modern-li-img" id="recipient-groups"></div><h2>Save frequent recipient groups for easy reuse</h2>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button id="returntop" type="button">Return to top</button>
   </div>
   <div class="content-frame-container" id="frame-container-5">
   </div>
