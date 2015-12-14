@@ -32,7 +32,7 @@
 				c1.45,0,2.61,1.16,2.61,2.61C273.64,76.08,272.48,77.24,271.03,77.24z M271.03,92.03h-38.67c-1.45,0-2.61-1.16-2.61-2.61
 				c0-1.45,1.16-2.61,2.61-2.61h38.67c1.45,0,2.61,1.16,2.61,2.61C273.64,90.87,272.48,92.03,271.03,92.03z"/>
 		</g>
-		<text transform="matrix(1 0 0 1 300.811 49.5571)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">privacy by </tspan><tspan x="268.33" y="0" style="fill:#B31B00; font-family:'Palanquin'; font-size:59px;">promise</tspan><tspan x="0" y="70.8" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">invasive advertising</tspan></text>
+		<text transform="matrix(1 0 0 1 300.811 49.5571)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">privacy by </tspan><tspan x="268.33" y="0" style="font-family:'Palanquin'; font-size:59px;"><tspan style="fill:#B31B00;">promise</tspan><tspan style="fill:#FFFFFF;">,</tspan></tspan><tspan x="0" y="70.8" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">invasive advertising</tspan></text>
 	</g>
 	<g>
 		<g>
@@ -73,7 +73,7 @@
 					s1.16-2.61,2.61-2.61h38.66c1.45,0,2.61,1.16,2.61,2.61S272.48,354.61,271.03,354.61z"/>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 300.8115 321.2266)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">privacy from </tspan><tspan x="327.8" y="0" style="fill:#00B51A; font-family:'Palanquin'; font-size:59px;">encryption</tspan><tspan x="0" y="70.8" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">data collection impossible</tspan></text>
+		<text transform="matrix(1 0 0 1 300.8115 321.2266)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">privacy from </tspan><tspan x="327.8" y="0" style="font-family:'Palanquin'; font-size:59px;"><tspan style="fill:#00B51A;">encryption</tspan><tspan style="fill:#FFFFFF">,</tspan></tspan><tspan x="0" y="70.8" style="fill:#FFFFFF; font-family:'Palanquin'; font-size:59px;">data collection impossible</tspan></text>
 	</g>
 </g>
 </svg>
