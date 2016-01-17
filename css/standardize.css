@@ -96,6 +96,35 @@ body {
   vertical-align: middle;
 }
 
+#igg-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 222px;
+  height: 222px;
+  background-image: url('/assets/igg-overlay.png');
+  background-repeat: no-repeat;
+  display: none;
+}
+
+#igg-overlay a {
+  width: 222px;
+  height: 222px;
+}
+
+#igg-splash {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  border: 0px;
+}
+
+#igg-embed {
+  border: 0px;
+  height: 445px;
+  width: 222px;
+}
+
 #mailchimpery {
   position: relative;
   top: -10%;
@@ -423,6 +452,14 @@ body {
 }
 
 @media(max-width: 550px) {
+  
+  #igg-overlay {
+    display: inline;
+  }
+
+  #igg-embed {
+    display: none;
+  }
   
   #modern-label h1 {
     font-size: 2em;
