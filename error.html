@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>Error | Ethyr</title>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is a mailchimp-only thingajobber, don't index it please. -->
+  <meta name="robots" content="noindex">
+  <!-- End mailchimp robots exclusion. -->
+  <link rel="canonical" href="https://www.ethyr.net/error.html">
+  <meta name="author" content="Nick Badger" />
+
+  <!-- Start OG -->
+    <meta property="og:site_name" content="ethyr" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="ethyr"/>
+    <meta property="og:url" content="https://www.ethyr.net/error.html"/>
+    <meta property="og:description" content="ethyr: error page"/>
+    <meta property="og:image" content="https://www.ethyr.net/images/backdrop-S.jpg"/>
+  <!-- End OG -->
+
+  <!-- Begin style links -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/standardize.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/mailchimp.css" type="text/css"/>
+  <!-- End style links -->
+  
+  <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          // Finally, make the page appear (waiting eliminates flicker).
+          $("#page-container").delay(450).animate({opacity:1}, 200);
+        });
+    </script>
+  <!-- No more scripts -->
+    
+  <!-- Dirty fucking google analytics, but at least I don't have ad tracking on. -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-67619311-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Hey man, gotta work with the system if you're to have a hope to change the system -->
+</head>
+<body>
+  <div class="content-frame-container" id="frame-container-1">
+    <div id="splash-logo">
+      <div class="content-frame">
+        <!-- Begin mailing list doodads -->
+        <div class="half-block" id="mailchimpery">
+          <h1>Error!</h1>
+          <h3>Something went wrong. <a href="/" style="color: rgb(139, 42, 44);">Take me home.</a></h3>
+        </div>
+        <!-- End mailing list doodads -->
+        <div class="half-block" id="app-mock-container">
+          <div id="app-mock"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Begin copyright footer -->
+  <div class="content-row" id="footer-page">
+    <div class="centered">
+      <p class="copyright">© <a href="https://www.muterra.io">Muterra, Inc</a>. All rights reserved.</p>
+    </div>
+  </div>
+  <!-- End copyright footer -->
+</body>
+</html>
